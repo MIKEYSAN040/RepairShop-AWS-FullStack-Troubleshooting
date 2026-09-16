@@ -17,7 +17,7 @@ This incident demonstrates a practical Cloud Support workflow: **identify custom
 
 The production Repair Shop frontend was accessible, but submitting a repair request failed.
 
-![Customer-facing failure](screenshots/01-repair-request-failed.png)
+![Customer-facing failure](01-repair-request-failed.png)
 
 
 > Reproduced the customer-facing failure, confirming that repair requests could no longer be submitted through the production frontend.
@@ -28,7 +28,7 @@ The production Repair Shop frontend was accessible, but submitting a repair requ
 
 The backend `/health` endpoint was tested directly and was unreachable.
 
-![Backend API unreachable](screenshots/02-backend-api-unreachable.png)
+![Backend API unreachable](02-backend-api-unreachable.png)
 
 
 > Validated that the frontend failure was caused by the backend API becoming unreachable.
@@ -39,7 +39,7 @@ The backend `/health` endpoint was tested directly and was unreachable.
 
 The EC2 systemd service was checked and found to be inactive.
 
-![Backend service inactive](screenshots/03-backend-service-inactive.png)
+![Backend service inactive](03-backend-service-inactive.png)
 
 
 > Investigated the EC2 application service and confirmed that the backend systemd service was inactive.
@@ -50,7 +50,7 @@ The EC2 systemd service was checked and found to be inactive.
 
 The service status and system logs were reviewed to confirm that the backend process was no longer running.
 
-![Service investigation](screenshots/04-service-investigation.png)
+![Service investigation](04-service-investigation.png)
 
 
 
@@ -63,7 +63,7 @@ The `repairshop-backend` systemd service had been stopped, making the backend AP
 
 The backend service was restored using systemd.
 
-![Backend service restored](screenshots/05-backend-service-restored.png)
+![Backend service restored](05-backend-service-restored.png)
 
 
 
@@ -75,7 +75,7 @@ The backend service was restored using systemd.
 
 The backend health endpoint was tested again and returned a healthy response.
 
-![API health restored](screenshots/06-api-health-restored.png)
+![API health restored](06-api-health-restored.png)
 
 
 
@@ -87,7 +87,7 @@ The backend health endpoint was tested again and returned a healthy response.
 
 A repair request was successfully submitted through the production frontend after the backend service was restored.
 
-![Repair request recovered](screenshots/07-repair-request-recovered.png)
+![Repair request recovered](07-repair-request-recovered.png)
 
 
 
@@ -97,7 +97,7 @@ A repair request was successfully submitted through the production frontend afte
 
 ## Root Cause
 
-**Backend systemd service stopped → EC2 API unavailable → frontend requests failed.**
+**Backend systemd service stopped -> EC2 API unavailable -> frontend requests failed.**
 
 ---
 
