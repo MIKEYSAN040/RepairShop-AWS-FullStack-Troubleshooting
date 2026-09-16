@@ -30,14 +30,14 @@ The deployment was approached from a **Cloud Support perspective**, with each ma
 
 ### AWS Services Used
 
-Component          | AWS Service      | Purpose
+Component          |   AWS Service      |   Purpose
 
- Frontend           - Amazon S3        - Hosts the production React application    
- Backend            - Amazon EC2       - Runs the Node.js / Express API            
- Database           - Amazon RDS MySQL - Stores repair requests                    
- Networking         - Amazon VPC       - Provides private network communication    
- Access Control     - Security Groups  - Controls application and database traffic 
- Service Management - Linux systemd    - Keeps the backend service running         
+ Frontend           -   Amazon S3        -   Hosts the production React application    
+ Backend            -   Amazon EC2       -   Runs the Node.js / Express API            
+ Database           -   Amazon RDS MySQL -   Stores repair requests                    
+ Networking         -   Amazon VPC       -   Provides private network communication    
+ Access Control     -   Security Groups  -   Controls application and database traffic 
+ Service Management -   Linux systemd    -   Keeps the backend service running         
 
 ---
 
@@ -79,7 +79,7 @@ The backend health endpoint was tested after deployment to confirm that the appl
 
 ![Backend Health Check](screenshots/04-Backend-Health-Check.png)
 
->  Performed an application health check to confirm that the deployed backend was operational before proceeding with further validation.
+ Performed an application health check to confirm that the deployed backend was operational before proceeding with further validation.
 
 ---
 
@@ -89,7 +89,7 @@ The React frontend was tested by creating a repair request and confirming that t
 
 ![Repair Request Created](screenshots/06-repair-request-created.png)
 
-> Validated the frontend workflow by successfully creating a repair request through the application interface.
+ Validated the frontend workflow by successfully creating a repair request through the application interface.
 
 ---
 
@@ -113,7 +113,7 @@ An Amazon EC2 instance was provisioned to host the Node.js backend application.
 
 ![EC2 Backend Instance](screenshots/08-backend-ec2-instance.png)
 
-> Provisioned an EC2 application server to host the backend and provide controlled connectivity to the private database layer.
+ Provisioned an EC2 application server to host the backend and provide controlled connectivity to the private database layer.
 
 ---
 
@@ -123,7 +123,7 @@ The Node.js runtime required by the backend was installed and validated on the E
 
 ![Node.js Installed](screenshots/09-nodejs-installed-on-ec2.png)
 
->Installed and validated the application runtime required to execute the Node.js backend on the server.
+Installed and validated the application runtime required to execute the Node.js backend on the server.
 
 ---
 
@@ -143,7 +143,7 @@ Private connectivity between the backend EC2 instance and RDS MySQL was verified
 
 ![EC2 RDS Connectivity](screenshots/11-ec2-rds-connectivity-verified.png)
 
->  Verified private backend-to-database connectivity to isolate network issues before validating application functionality.
+  Verified private backend-to-database connectivity to isolate network issues before validating application functionality.
 
 ---
 
@@ -153,7 +153,7 @@ The deployed API was tested by submitting a repair request and confirming succes
 
 ![End-to-End API Success](screenshots/13-end-to-end-repair-api-success.png)
 
-> Validated the backend end-to-end by submitting a repair request and confirming successful database persistence.
+ Validated the backend end-to-end by submitting a repair request and confirming successful database persistence.
 
 ---
 
@@ -175,7 +175,7 @@ The production React build artifacts were uploaded to the Amazon S3 frontend hos
 
 ![Frontend Files Uploaded](screenshots/15-frontend-files-uploaded-to-s3.png)
 
->  Deployed the production frontend artifacts to Amazon S3 as the application's web hosting layer.
+ Deployed the production frontend artifacts to Amazon S3 as the application's web hosting layer.
 
 ---
 
@@ -185,7 +185,7 @@ The React application was successfully served through Amazon S3 static website h
 
 ![AWS Hosted Frontend](screenshots/16-aws-hosted-frontend.png)
 
->  Verified that the production frontend was accessible through AWS static website hosting.
+  Verified that the production frontend was accessible through AWS static website hosting.
 
 ---
 
@@ -195,7 +195,7 @@ The final application workflow was tested from the AWS-hosted frontend through t
 
 ![Full Stack Deployment Validation](screenshots/17-full-stack-deployment-validation.png)
 
->  Validated the complete production workflow from frontend request through backend processing to database persistence.
+  Validated the complete production workflow from frontend request through backend processing to database persistence.
 
 ---
 
@@ -205,13 +205,13 @@ The final deployment was validated across each major layer:
 
 | Layer      | Validation                                            
 
- Frontend   - React application successfully hosted on S3           
- Backend    - Node.js / Express API successfully deployed           
- API        - Health check and repair request endpoints validated   
- Network    - EC2-to-RDS private connectivity verified              
- Database   - Repair requests successfully persisted in RDS         
- Security   - Database access restricted through Security Groups    
- Full Stack - Frontend → Backend → RDS workflow successfully tested 
+ Frontend   -   React application successfully hosted on S3           
+ Backend    -   Node.js / Express API successfully deployed           
+ API        -   Health check and repair request endpoints validated   
+ Network    -   EC2-to-RDS private connectivity verified              
+ Database   -   Repair requests successfully persisted in RDS         
+ Security   -   Database access restricted through Security Groups    
+ Full Stack -   Frontend → Backend → RDS workflow successfully tested 
 
 ---
 
