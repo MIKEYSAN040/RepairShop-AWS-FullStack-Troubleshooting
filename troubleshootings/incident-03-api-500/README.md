@@ -18,7 +18,7 @@ This incident demonstrates a practical Cloud Support workflow: **identify custom
 
 The production frontend was available, but submitting a repair request failed.
 
-[Customer API failure](01-repair-request-api-failure.png)
+![Customer API failure](01-repair-request-api-failure.png)
 
 
 > Reproduced the customer-facing failure, confirming that repair requests were failing despite the production frontend remaining accessible.
