@@ -29,7 +29,7 @@ The production frontend was available, but submitting a repair request failed.
 
 The backend API remained reachable, but the database-dependent repair request returned an HTTP 500 error.
 
-[API 500 error](02-api-500-error.png)
+![API 500 error](02-api-500-error.png)
 
 
 > Confirmed that the backend API was reachable but returned an HTTP 500 error when processing a database-backed repair request.
@@ -40,7 +40,7 @@ The backend API remained reachable, but the database-dependent repair request re
 
 The EC2 backend service was checked to determine whether the failure was caused by the application service being stopped.
 
-[Backend service running](03-backend-service-running.png)
+![Backend service running](03-backend-service-running.png)
 
 
 > Confirmed the backend service remained operational, narrowing the issue from service availability to an application-level database configuration issue.
@@ -51,7 +51,7 @@ The EC2 backend service was checked to determine whether the failure was caused 
 
 The backend application logs were reviewed to identify the reason for the HTTP 500 response.
 
-[Application error logs](04-application-error-logs.png)
+![Application error logs](04-application-error-logs.png)
 
 
 > Reviewed application logs and identified an invalid database configuration as the root cause of the API failures.
@@ -68,7 +68,7 @@ The backend application logs were reviewed to identify the reason for the HTTP 5
 
 The incorrect database configuration was restored to the production database name and the backend service was restarted.
 
-[Database configuration restored](05-database-configuration-restored.png)
+![Database configuration restored](05-database-configuration-restored.png)
 
 
 > Restored the correct production database configuration and restarted the backend service to apply the remediation.
@@ -79,7 +79,7 @@ The incorrect database configuration was restored to the production database nam
 
 A database-backed repair request was successfully processed after restoring the correct database configuration.
 
-[API recovery](06-api-recovery.png)
+![API recovery](06-api-recovery.png)
 
 
 > Confirmed API recovery by successfully processing a database-backed repair request after restoring the correct application configuration.
@@ -90,7 +90,7 @@ A database-backed repair request was successfully processed after restoring the 
 
 The production frontend was tested again and the repair request was successfully submitted.
 
-[Repair request recovered](07-repair-request-recovered.png)
+![Repair request recovered](07-repair-request-recovered.png)
 
 
 > Completed end-to-end recovery validation by successfully submitting a repair request through the production frontend after restoring the correct application configuration.
