@@ -121,6 +121,4 @@ The complete application flow returned to normal:
 
 **Customer -> S3 Frontend -> EC2 Backend -> RDS MySQL**
 
-### HR / Recruiter Takeaway
 
-This incident demonstrates the ability to **troubleshoot a cloud application layer by layer, use AWS networking evidence to identify the root cause, apply a targeted configuration fix, and verify customer recovery.**
