@@ -18,7 +18,7 @@ This incident demonstrates a practical Cloud Support workflow: **identify custom
 
 The production frontend was accessible, but submitting a repair request failed.
 
-[Customer frontend failure](01-repair-request-frontend-failure.png)
+![Customer frontend failure](01-repair-request-frontend-failure.png)
 
 
 > Confirmed that customers could access the application but were unable to complete the repair request workflow.
@@ -29,7 +29,7 @@ The production frontend was accessible, but submitting a repair request failed.
 
 The browser developer console was inspected after reproducing the failure.
 
-[Browser CORS error](02-browser-console-cors-error.png)
+![Browser CORS error](02-browser-console-cors-error.png)
 
 
 > Browser diagnostics showed that the frontend request was being rejected by the backend's cross-origin access policy.
@@ -40,7 +40,7 @@ The browser developer console was inspected after reproducing the failure.
 
 The backend health endpoint was tested independently to determine whether the API itself was unavailable.
 
-[Backend API reachable](03-backend-api-reachable.png)
+![Backend API reachable](03-backend-api-reachable.png)
 
 
 > Verified that the backend remained healthy, ruling out backend service availability as the primary cause of the customer-facing failure.
@@ -51,7 +51,7 @@ The backend health endpoint was tested independently to determine whether the AP
 
 The backend configuration was reviewed and the configured CORS origin was found to be incorrect.
 
-[CORS configuration investigation](04-cors-configuration-investigation.png)
+![CORS configuration investigation](04-cors-configuration-investigation.png)
 
 
 > Identified an invalid allowed origin in the backend configuration, preventing requests from the production S3 frontend.
@@ -68,7 +68,7 @@ The backend configuration was reviewed and the configured CORS origin was found 
 
 The incorrect CORS setting was replaced with the working configuration and the backend service was restarted.
 
-[CORS configuration restored](05-cors-configuration-restored.png)
+![CORS configuration restored](05-cors-configuration-restored.png)
 
 
 > Applied the corrected cross-origin configuration and restarted the backend so the updated policy became active.
@@ -79,7 +79,7 @@ The incorrect CORS setting was replaced with the working configuration and the b
 
 The backend API was tested directly after the configuration change.
 
-[API recovery](06-api-recovery.png)
+![API recovery](06-api-recovery.png)
 
 
 > Confirmed that the API could successfully process a repair request after the configuration change was applied.
@@ -90,7 +90,7 @@ The backend API was tested directly after the configuration change.
 
 The production frontend was tested again after the backend configuration was restored.
 
-[Repair request recovered](07-repair-request-recovered.png)
+![Repair request recovered](07-repair-request-recovered.png)
 
 
 > Verified that the complete customer workflow was operational again through the production frontend.
