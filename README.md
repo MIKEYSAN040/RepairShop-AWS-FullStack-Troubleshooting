@@ -28,6 +28,7 @@ A full-stack repair shop application deployed on AWS and used to demonstrate **h
  Resolved **5 realistic production-style incidents**:
 
  Incident                                 Troubleshooting Focus        
+ 
  Backend Service Stopped                - Linux / systemd              
  Database Connectivity Failure          - Security Groups / Networking 
  API HTTP 500                           - Database Configuration       
@@ -40,7 +41,7 @@ A full-stack repair shop application deployed on AWS and used to demonstrate **h
 
 ## Key Skills Demonstrated
 
-**AWS • Linux • Networking • API Troubleshooting • Database Connectivity • Security Groups • Configuration Troubleshooting • Log Analysis • Incident Response • Root-Cause Analysis • End-to-End Validation**
+**AWS, Linux, Networking, API Troubleshooting, Database Connectivity, Security Groups, Configuration Troubleshooting, Log Analysis, Incident Response, Root-Cause Analysis, End-to-End Validation**
 
 ## Project Outcome
 
