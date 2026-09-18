@@ -27,12 +27,11 @@ A full-stack repair shop application deployed on AWS and used to demonstrate **h
 
  Resolved **5 realistic production-style incidents**:
 
-| Incident                               | Troubleshooting Focus     |   
- Backend Service Stopped                - Linux / systemd              
- Database Connectivity Failure          - Security Groups / Networking 
- API HTTP 500                           - Database Configuration       
- Frontend–Backend Failure               - CORS / API Connectivity      
- Service Failure After EC2 Reboot       - Service Persistence          
+ Incident-01-Backend Service Stopped                - Linux / systemd              
+ Incident-02-Database Connectivity Failure          - Security Groups / Networking 
+ Incident-03-API HTTP 500                           - Database Configuration       
+ Incident-04-Frontend–Backend Failure               - CORS / API Connectivity      
+ Incident-05-Service Failure After EC2 Reboot       - Service Persistence          
 
 ## Support Workflow
 
