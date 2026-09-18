@@ -27,8 +27,7 @@ A full-stack repair shop application deployed on AWS and used to demonstrate **h
 
  Resolved **5 realistic production-style incidents**:
 
- Incident                                 | Troubleshooting Focus        
- 
+| Incident                               | Troubleshooting Focus     |   
  Backend Service Stopped                - Linux / systemd              
  Database Connectivity Failure          - Security Groups / Networking 
  API HTTP 500                           - Database Configuration       
