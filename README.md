@@ -29,6 +29,7 @@ A full-stack repair shop application deployed on AWS and used to demonstrate **h
 
  Incident-01-Backend Service Stopped                - Linux / systemd              
  Incident-02-Database Connectivity Failure          - Security Groups / Networking 
+
  Incident-03-API HTTP 500                           - Database Configuration       
  Incident-04-Frontend–Backend Failure               - CORS / API Connectivity      
  Incident-05-Service Failure After EC2 Reboot       - Service Persistence          
